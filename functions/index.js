@@ -11,3 +11,6 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 /// Exports ///
+exports.helloWorld = functions.https.onRequest((request, response) => {
+    response.send("Hello from Firebase!");
+});
